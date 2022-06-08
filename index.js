@@ -17,6 +17,7 @@ app.set("view engine", "handlebars");
 app.use("/css", express.static(__dirname +
     "/node_modules/bootstrap/dist/css"));
 
+app.use("/assets",express.static("assets"));
 app.get("/", function (req, res) {
     res.render("main", { layout: "main" });
 });
